@@ -1,4 +1,5 @@
 sudo: required 
+language: generic 
 services:
   - docker
 
@@ -7,4 +8,4 @@ services:
 
 
 script:
-  - docker run rakeshz12/docker-react npm run test -- --coverage    
+ - docker run -e CI=true rakeshz12/docker-react npm run test   

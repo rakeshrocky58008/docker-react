@@ -11,8 +11,8 @@ services:
  - docker
 
 before_install:
- - docker build -t vovikdevop/docker-react -f Dockerfile.dev .
+ - docker build -t rakeshz12/docker-react -f Dockerfile.dev .
 
 script: 
- - docker run vovikdevop/docker-react npm run test -- --coverage
+ - docker run rakeshz12docker-react npm run test -- --coverage
 

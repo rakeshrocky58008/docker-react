@@ -1,16 +1,17 @@
 
 
-language: node_js
+language: generic
+
 sudo: required
 
-node_js:
-  - "8"
+
+
 services:
   - docker
 
  before_install:
-  - docker build -t rakeshrocky58008/docker-react -f dockerfile.dev .
+  - docker build -t rakesh12z/docker-react -f dockerfile.dev .
 
 
 script:
- - docker run -e CI=true rakeshrocky58008/docker-react npm run test -- --coverage
+ - docker run -e CI=true rakesh12z/docker-react npm run test -- --coverage
